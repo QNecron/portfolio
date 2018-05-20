@@ -1,0 +1,17 @@
+//
+@mixin shadow($box: 1, $text: 0, $color: black, $opacity: .24) {
+  $box-shadow: false;
+  $box-shadow-size: 0px 0px 0px;
+  $text-shadow: false;
+  $text-shadow-size: 0px 0px;
+
+  @if($box <= 1) {
+    $box-shadow: true;
+    $box-shadow-size: 0px 1px 3px;
+  }
+
+  @if($box-shadow == true) {
+    box-shadow: $box-shadow-size rgba($color, $opacity);
+  }
+
+}
