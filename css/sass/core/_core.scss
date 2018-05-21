@@ -1,4 +1,8 @@
 //
 @import "functions/_rem";
-@import "core/_normalize";
+@import "variables/_variables";
+@import "_reset";
+@import "buttons/_buttons";
+@import "typography/_typography";
+// mixins
 @import "mixins/_shadows";

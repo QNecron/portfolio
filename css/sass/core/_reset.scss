@@ -1,0 +1,20 @@
+//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}

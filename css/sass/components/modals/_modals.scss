@@ -1,5 +1,6 @@
 //
 .modal {
+  backface-visibility: hidden;
   padding: rem(16) rem(32);
   min-width: rem(300);
   max-width: 50vw;

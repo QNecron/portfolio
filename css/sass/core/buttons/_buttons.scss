@@ -1,0 +1,20 @@
+//
+[class*="btn-"] {
+  background: transparent;
+  border-radius: 0;
+  font-size: rem(12);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &[class*="primary"] {
+    border: solid rem(2);
+    padding: rem(16) rem(24);
+    letter-spacing: rem(3);
+  }
+
+  &[class*="icon"] {
+    border: 0;
+    padding: rem(16);
+  }
+
+}

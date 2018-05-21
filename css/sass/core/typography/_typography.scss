@@ -1,0 +1,13 @@
+//
+body {
+  font-family: $roboto;
+  letter-spacing: rem(1);
+}
+
+.srt {
+  clip: rect(rem(1), rem(1), rem(1), rem(1));
+  height: rem(1);
+  width: rem(1);
+  overflow: hidden;
+  position: absolute;
+}
