@@ -1,5 +1,6 @@
 //
 .modal {
+  background: $white;
   backface-visibility: hidden;
   padding: rem(16) rem(32);
   min-width: rem(300);
@@ -9,7 +10,7 @@
   left: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  @include shadow(1);
+  @include shadow(2, 0, $black);
 }
 
 //

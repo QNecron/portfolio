@@ -1,0 +1,15 @@
+//
+.sections {
+  padding: rem(32) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-hero {
+  background: linear-gradient(135deg, hsla(204, 70%, 53%, 1) 0%, hsla(282, 44%, 47%, 1) 100%);
+  border-bottom: solid rem(1) rgba($black, .32);
+  color: $white;
+  padding: 25vh 0;
+  text-align: center;
+  @include shadow(0, 1, $black);
+}

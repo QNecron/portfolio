@@ -1,11 +1,20 @@
 //
 @font-face {
   font-family: 'anuratiregular';
-  src: url('fonts/anurati-regular-webfont.woff2') format('woff2'),
-       url('fonts/anurati-regular-webfont.woff') format('woff');
+  src: url('../fonts/anurati-regular-webfont.woff2') format('woff2'),
+       url('../fonts/anurati-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 $anurati: 'anuratiregular', sans-serif;
 $roboto: 'Roboto', sans-serif;
+
+//
+$black: #2c3e50;
+$white: #ecf0f1;
+$blue: #3498db;
+$purple: #8e44ad;
+
+//
+$mq-phone: '(max-width: 767px)';

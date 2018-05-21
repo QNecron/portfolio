@@ -1,8 +1,14 @@
-//
+// core
 @import "functions/_rem";
 @import "variables/_variables";
+
+// mixins
+@import "mixins/_media-queries";
+@import "mixins/_shadows";
+
+// reset
 @import "_reset";
+
+// 
 @import "buttons/_buttons";
 @import "typography/_typography";
-// mixins
-@import "mixins/_shadows";

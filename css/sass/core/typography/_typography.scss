@@ -4,10 +4,50 @@ body {
   letter-spacing: rem(1);
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+  line-height: 1.1;
+
+  // media
+  @include media($mq-phone) {
+    line-height: 1.5;
+  }
+
+}
+
 .srt {
   clip: rect(rem(1), rem(1), rem(1), rem(1));
   height: rem(1);
   width: rem(1);
   overflow: hidden;
   position: absolute;
+}
+
+[class*="hero-"] {
+  text-transform: uppercase;
+
+  &[class*="primary"] {
+    font-family: $anurati;
+    font-size: rem(48);
+    letter-spacing: rem(8);
+
+    // media
+    @include media($mq-phone) {
+      font-size: rem(32);
+    }
+
+  }
+
+  &[class*="secondary"] {
+    font-size: rem(32);
+    font-weight: 400;
+    letter-spacing: rem(8);
+
+    // media
+    @include media($mq-phone) {
+      font-size: rem(24);
+    }
+
+  }
+
 }
