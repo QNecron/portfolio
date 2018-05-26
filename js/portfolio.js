@@ -17,6 +17,7 @@ function menuSetup(link, menu) {
   link.addEventListener('click', function(m) {
     m.preventDefault();
     menu.classList.toggle('open');
+    link.classList.toggle('open');
 
     // mobile
     if(window.innerWidth <= 767) {

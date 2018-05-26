@@ -6,9 +6,9 @@
 }
 
 .section-hero {
-  background: linear-gradient(135deg, hsla(204, 70%, 53%, 1) 0%, hsla(282, 44%, 47%, 1) 100%);
-  border-bottom: solid rem(1) rgba($black, .32);
+  background: linear-gradient(135deg, rgba($blue, 1) 0%, rgba($pink, 1) 100%);
   color: $white;
+  margin-top: rem(48);
   padding: 25vh 0;
   text-align: center;
   @include shadow(0, 1, $black);

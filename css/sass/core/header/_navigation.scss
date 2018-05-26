@@ -1,10 +1,10 @@
 //
 .navigation-container {
-  padding: 0 rem(16);
+  display: flex;
 
   // media
   @include media($mq-mobile) {
-    padding: 0;
+    display: block;
   }
 
 }
@@ -12,18 +12,19 @@
 .navigation {
   display: flex;
   justify-content: flex-end;
+  width: calc(100% - 48px);
 
   // media
   @include media($mq-mobile) {
-    background: rgba($black, .88);
+    background: rgba($black, .96);
     border-top: solid rem(2) $white;
     flex-direction: column;
     justify-content: flex-start;
-    height: calc(100vh - 56px);
-    width: 100%;
+    height: calc(100vh - 48px);
+    width: rem(256);
     position: absolute;
-    top: rem(50);
-    left: 0;
+    top: rem(48);
+    right: 0;
     transform: translate3d(100%, 0, 0);
     transition: all .24s ease-in-out 0s;
 
@@ -36,12 +37,6 @@
 }
 
 .nav-item {
-  margin-left: rem(16);
-
-  // media
-  @include media($mq-mobile) {
-    margin-left: 0;
-  }
 
 }
 
@@ -50,59 +45,95 @@
   color: $white;
   display: block;
   font-weight: 400;
-  padding: rem(16) 0;
-  opacity: .64;
+  padding: rem(16);
   outline: 0;
   position: relative;
 
-  // media
-  @include media($mq-mobile) {
-    padding: rem(16);
-    opacity: 1;
-  }
-
-  &.active,
   &:focus,
   &:hover {
-    opacity: 1;
+    color: $cyan;
 
     &:before {
+      background: $cyan;
       opacity: 1;
       transform: scale(1, 1);
     }
 
   }
 
-  &:before {
-    content: "";
-    background: $white;
-    height: rem(2);
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: scale(0, 1);
-    transform-origin: 0 0;
-    transition: all .24s ease-in-out 0s;
+  &.open {
+    background: $red;
+    color: $white;
 
-    // media
-    @include media($mq-mobile) {
+    &:before {
       display: none;
     }
 
   }
 
+  // media
+  @include media($mq-tablet-up) {
+
+    &:before {
+      content: "";
+      background: $white;
+      height: rem(2);
+      width: 100%;
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scale(0, 1);
+      transform-origin: 0 0;
+      transition: all .24s ease-in-out 0s;
+    }
+
+    &.highlight {
+      background: $red;
+      color: $white;
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
+  @include media($mq-mobile) {
+    border-bottom: solid rem(1) rgba($white, .04);
+    text-align: right;
+  }
+
 }
 
 //
-.navigation-mobile {
+.nav-home {
+  background: $cyan;
+  border: 0;
+  color: $white;
+  float: left;
+  height: rem(48);
+  width: rem(48);
+  position: relative;
+
+  .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+//
+.nav-mobile {
+  border: 0;
   display: none;
 
   // media
   @include media($mq-mobile) {
-    display: inline-block;
-    padding: rem(16);
+    display: block;
+    float: right;
   }
 
 }
