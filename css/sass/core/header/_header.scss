@@ -1,0 +1,16 @@
+// header
+.header-container {
+  background: rgba($black, .88);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  @include shadow(1, 0, $black);
+
+  // media
+  @include media($mq-mobile) {
+    box-shadow: none;
+  }
+
+}

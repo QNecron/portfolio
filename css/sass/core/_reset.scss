@@ -16,7 +16,17 @@ body {
   position: relative;
 }
 
+a {
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .24s ease-in-out 0s;
+}
+
 button {
   -webkit-appearance: none;
   appearance: none;
+}
+
+ul, ol {
+  list-style-type: none;
 }

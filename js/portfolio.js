@@ -1,5 +1,7 @@
 //
 var pageContainer = document.querySelector('[data-page-container]');
+var menu = document.querySelector('[data-menu]');
+var menuTrigger = document.querySelector('[data-menu-trigger]');
 var dialog = document.querySelectorAll('[data-dialog]');
 var dialogTrigger = document.querySelectorAll('[data-dialog-trigger]');
 // var dialogOverlay = document.querySelector('[data-dialog-overlay]');
@@ -8,6 +10,31 @@ var dialogTrigger = document.querySelectorAll('[data-dialog-trigger]');
 function ariaHidden(ele, attr) {
   ele.setAttribute('aria-hidden', attr.toString());
 }
+
+//
+function menuSetup(link, menu) {
+
+  link.addEventListener('click', function(m) {
+    m.preventDefault();
+    menu.classList.toggle('open');
+
+    // mobile
+    if(window.innerWidth <= 767) {
+
+      if(link.getAttribute('aria-expanded') == 'false') {
+        link.setAttribute('aria-expanded', 'true');
+      }
+      else {
+        link.setAttribute('aria-expanded', 'false');
+      }
+
+    }
+
+  });
+
+}
+
+menuSetup(menuTrigger, menu);
 
 //
 function openDialog(trigger) {

@@ -9,30 +9,26 @@ h1, h2, h3, h4 {
   line-height: 1.1;
 
   // media
-  @include media($mq-phone) {
+  @include media($mq-mobile) {
     line-height: 1.5;
   }
 
 }
 
 .srt {
-  clip: rect(rem(1), rem(1), rem(1), rem(1));
-  height: rem(1);
-  width: rem(1);
-  overflow: hidden;
-  position: absolute;
+  @extend %screen-reader-text;
 }
 
 [class*="hero-"] {
   text-transform: uppercase;
 
   &[class*="primary"] {
-    font-family: $anurati;
+    // font-family: $anurati;
     font-size: rem(48);
     letter-spacing: rem(8);
 
     // media
-    @include media($mq-phone) {
+    @include media($mq-mobile) {
       font-size: rem(32);
     }
 
@@ -44,7 +40,7 @@ h1, h2, h3, h4 {
     letter-spacing: rem(8);
 
     // media
-    @include media($mq-phone) {
+    @include media($mq-mobile) {
       font-size: rem(24);
     }
 
