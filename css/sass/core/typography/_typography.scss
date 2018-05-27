@@ -19,11 +19,11 @@ h1, h2, h3, h4 {
   @extend %screen-reader-text;
 }
 
+//
 [class*="hero-"] {
   text-transform: uppercase;
 
   &[class*="primary"] {
-    // font-family: $anurati;
     font-size: rem(48);
     letter-spacing: rem(8);
 
@@ -48,7 +48,20 @@ h1, h2, h3, h4 {
 
 }
 
-// material icons
-.material-icons {
+//
+[class*="heading-"] {
+  color: darken($red, 10%);
+  margin-bottom: rem(8);
+  text-transform: uppercase;
+
+  &[class*="primary"] {
+    font-size: rem(24);
+    letter-spacing: rem(4);
+  }
+
+  &[class*="secondary"] {
+    font-size: rem(16);
+    letter-spacing: rem(4);
+  }
 
 }

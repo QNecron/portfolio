@@ -36,9 +36,7 @@
 
 }
 
-.nav-item {
-
-}
+// .nav-item { }
 
 .nav-link {
   @extend %black-letter;
@@ -91,6 +89,11 @@
     &.highlight {
       background: $red;
       color: $white;
+
+      &:focus,
+      &:hover {
+        background: darken($red, 10%);
+      }
 
       &:before {
         display: none;
