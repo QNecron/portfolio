@@ -10,7 +10,7 @@
   }
 
   &.red {
-    background: $red;
+    background: darken($red, 10%);
     color: $white;
 
     [class*="heading-"] {

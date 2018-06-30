@@ -2,14 +2,53 @@
 [class*="btn-"] {
   background: transparent;
   border-radius: 0;
+  display: inline-block;
   font-size: rem(12);
   font-weight: 700;
+  margin: rem(8) 0;
+  text-align: center;
   text-transform: uppercase;
+  position: relative;
+
+  // media
+  @include media($mq-mobile) {
+    display: block;
+  }
 
   &[class*="primary"] {
     border: solid rem(2);
     padding: rem(16) rem(24);
     letter-spacing: rem(3);
+  }
+
+  &[class*="cta"] {
+    // background: $black;
+    border-color: $white;
+    color: $white;
+    @include shadow(1, 1, $black, .16);
+
+    &:before {
+      content: "";
+      background: linear-gradient(135deg, rgba($blue, 1) 0%, rgba($pink, 1) 100%);
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .32s ease-in-out 0s;
+    }
+
+    &:focus,
+    &:hover {
+
+      &:before {
+        opacity: 1;
+      }
+
+    }
+
   }
 
   &[class*="icon"] {

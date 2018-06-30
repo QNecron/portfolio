@@ -19,14 +19,19 @@ body {
 a {
   font-weight: 700;
   text-decoration: none;
-  transition: all .24s ease-in-out 0s;
+  transition: all .32s ease-in-out 0s;
 }
 
 button {
   -webkit-appearance: none;
   appearance: none;
+  transition: all .32s ease-in-out 0s;
 }
 
 ul, ol {
   list-style-type: none;
+}
+
+p {
+  margin: rem(8) 0;
 }
