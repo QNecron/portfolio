@@ -126,11 +126,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      console.log(this.getAttribute('href'));
+      if (document.getElementById(this.getAttribute('href'))) {
 
-      document.getElementById(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+        document.getElementById(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+
+      }
 
     });
 
