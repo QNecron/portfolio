@@ -29,7 +29,9 @@ title: Home
 {{< section 
   theme="red" 
   heading="Resume"
-  copy="View my code, don’t worry I’m not affraid! Right Click > View Page Source. All of that, yeah that was me doing what I do best. Or, if you'd like you can view my actual resume below."
+  copy="View my code, don’t worry I’m not affraid! Right Click > View Page Source. All of that, yeah that was me doing what I do best. Or, if you'd like you can view my actual resume below." 
+  cta="View Resume"
+  url="https://docs.google.com/document/d/16jEGn8U72EJPARvov3lZHJcg6k6P9slDenUfcXhE-QU"
 >}}
 
 {{< /section >}}

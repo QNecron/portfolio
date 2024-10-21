@@ -1,6 +1,7 @@
 /* resume */
 :root {
   
+  --size-2: .125rem;
   --size-4: .25rem;
   --size-8: .5rem;
   --size-12: .75rem;
@@ -25,6 +26,8 @@
   
   --app-padding-right-left: 8vw;
   
+  --app-transition-1: .24s ease-in-out 0s;
+  
   --app-wrapper: 64rem; /* 1024px */
   
 }
@@ -33,6 +36,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: var(--app-transition-1);
 }
 
 button {
@@ -52,17 +63,86 @@ body {
   line-height: 1.5;
 }
 
+/* buttons */
+[button] {
+  --button-background: var(--color-white);
+  --button-border: solid var(--size-2) var(--color-blue-dark);
+  --button-color: var(--color-blue-dark);
+  --button-font-size: var(--size-12);
+  --button-font-weight: bold;
+  --button-letter-spacing: var(--app-title-letter-spacing);
+  --button-padding-top-bottom: calc(var(--size-12) + 1px); /* padding + border silliness */
+  --button-padding-right-left: var(--size-16);
+  --button-text-transform: uppercase;
+  background: var(--button-background);
+  border: var(--button-border);
+  color: var(--button-color);
+  display: inline-flex;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  padding: var(--button-padding-top-bottom) var(--button-padding-right-left);
+  text-decoration: none;
+  text-transform: var(--button-text-transform);
+}
+
+/* CSS silliness for transitioning linear-gradient -_- */
+@property --button-bg-color1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #3498db;
+}
+
+@property --button-bg-color2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f5a3de;
+}
+
+[button="resume"] {
+  --button-background: linear-gradient(to right, var(--button-bg-color1), var(--button-bg-color2));
+  --button-border: solid var(--size-2) var(--color-white);
+  --button-color: var(--color-white);
+  transition: --button-bg-color1 .24s, --button-bg-color2 .24s;
+  
+  &:focus,
+  &:hover {
+    --button-bg-color1: #e43725;
+    --button-bg-color2: #e43725;
+  }
+  
+}
+
 /* typography */
+.srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  height: 1px;  
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
 .heading {
   --heading-color: var(--color-red);
   --heading-font-size: var(--app-title-font-size-1);
   --heading-letter-spacing: var(--app-title-letter-spacing);
-  --heading-margin-bottom: var(--size-8);
   color: var(--heading-color);
   font-size: var(--heading-font-size);
   letter-spacing: var(--heading-letter-spacing);
-  margin-bottom: var(--heading-margin-bottom);
   text-transform: uppercase;
+}
+
+/* icons */
+[icon] {
+  position: relative;
+}
+
+[icon="linkedin"],
+[icon="github"] {
+  transform: translate(0, 2px);
 }
 
 /* wrapper */
@@ -76,16 +156,51 @@ body {
   max-width: var(--wrapper-max-width);
 }
 
+/* header */
+
+/* footer */
+.footer {
+  --footer-background: var(--color-blue-dark);
+  --footer-color: var(--color-white);
+  --footer-font-size: var(--size-12);
+  background: var(--footer-background);
+  color: var(--footer-color);
+  font-size: var(--footer-font-size);
+  padding: var(--size-12) 0;
+  
+  .footer__copyright {
+    flex: 1 0 auto;
+  }  
+  
+  .footer__nav {
+    align-items: center;
+    display: flex;
+    gap: var(--size-4);
+  }
+  
+  .footer__link {
+    padding: 0 var(--size-8);   
+  }
+  
+}
+
 /* section */
 .section {
   --section-background: inherit;
   --section-color: inherit;
   --section-padding-top-bottom: 16vh;
   --section-paddding-right-left: 0;
+  --section-content-gap: var(--size-8);
   background: var(--section-background);
   color: var(--section-color);
   padding: var(--section-padding-top-bottom) var(--section-paddding-right-left);
   position: relative;
+  
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-content-gap);
+  }
 }
 
 [section-theme~="dark"] {

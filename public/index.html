@@ -11,7 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     
-<style>:root{--size-4:.25rem;--size-8:.5rem;--size-12:.75rem;--size-16:1rem;--color-blue-dark:#1a252f;--color-cyan:#28e1bd;--color-red:#e43725;--color-white:#fff;--color-blue-light:#3498db;--color-pink:#f5a3de;--body-background-color:var(--color-white);--body-font-color:var(--color-blue-dark);--body-font-family:"Roboto", sans-serif;--app-title-font-size-1:1.5rem;--app-title-letter-spacing:.25rem;--app-padding-right-left:8vw;--app-wrapper:64rem}*{box-sizing:border-box;margin:0;padding:0}button{background:0 0;border:none;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}body{background:var(--body-background-color);color:var(--body-font-color);font-family:var(--body-font-family);font-size:16px;line-height:1.5}.heading{--heading-color:var(--color-red);--heading-font-size:var(--app-title-font-size-1);--heading-letter-spacing:var(--app-title-letter-spacing);--heading-margin-bottom:var(--size-8);color:var(--heading-color);font-size:var(--heading-font-size);letter-spacing:var(--heading-letter-spacing);margin-bottom:var(--heading-margin-bottom);text-transform:uppercase}[wrapper]{--wrapper-padding-right-left:var(--app-padding-right-left);--wrapper-max-width:var(--app-wrapper);margin-right:auto;margin-left:auto;padding-right:var(--wrapper-padding-right-left);padding-left:var(--wrapper-padding-right-left);max-width:var(--wrapper-max-width)}.section{--section-background:inherit;--section-color:inherit;--section-padding-top-bottom:16vh;--section-paddding-right-left:0;background:var(--section-background);color:var(--section-color);padding:var(--section-padding-top-bottom)var(--section-paddding-right-left);position:relative}[section-theme~=dark]{--section-background:var(--color-blue-dark);--section-color:var(--color-white)}[section-theme~=red]{--section-background:var(--color-red);--section-color:var(--color-white);.heading { --heading-color: var(--color-white); }}</style>
+<style>:root{--size-2:.125rem;--size-4:.25rem;--size-8:.5rem;--size-12:.75rem;--size-16:1rem;--color-blue-dark:#1a252f;--color-cyan:#28e1bd;--color-red:#e43725;--color-white:#fff;--color-blue-light:#3498db;--color-pink:#f5a3de;--body-background-color:var(--color-white);--body-font-color:var(--color-blue-dark);--body-font-family:"Roboto", sans-serif;--app-title-font-size-1:1.5rem;--app-title-letter-spacing:.25rem;--app-padding-right-left:8vw;--app-transition-1:.24s ease-in-out 0s;--app-wrapper:64rem}*{box-sizing:border-box;margin:0;padding:0}a,button,input,select,textarea{transition:var(--app-transition-1)}button{background:0 0;border:none;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}body{background:var(--body-background-color);color:var(--body-font-color);font-family:var(--body-font-family);font-size:16px;line-height:1.5}[button]{--button-background:var(--color-white);--button-border:solid var(--size-2) var(--color-blue-dark);--button-color:var(--color-blue-dark);--button-font-size:var(--size-12);--button-font-weight:bold;--button-letter-spacing:var(--app-title-letter-spacing);--button-padding-top-bottom:calc(var(--size-12) + 1px);--button-padding-right-left:var(--size-16);--button-text-transform:uppercase;background:var(--button-background);border:var(--button-border);color:var(--button-color);display:inline-flex;font-size:var(--button-font-size);font-weight:var(--button-font-weight);letter-spacing:var(--button-letter-spacing);padding:var(--button-padding-top-bottom)var(--button-padding-right-left);text-decoration:none;text-transform:var(--button-text-transform)}@property --button-bg-color1{syntax: '<color>';
+  inherits: false;
+  initial-value: #3498db;
+}@property --button-bg-color2{syntax: '<color>';
+  inherits: false;
+  initial-value: #f5a3de;
+}[button=resume]{--button-background:linear-gradient(to right, var(--button-bg-color1), var(--button-bg-color2));--button-border:solid var(--size-2) var(--color-white);--button-color:var(--color-white);transition:--button-bg-color1 .24s,--button-bg-color2 .24s;&:focus,&:hover { --button-bg-color1:#e43725; --button-bg-color2:#e43725; }}.srt{border:0;clip:rect(0 0 0 0);margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;position:absolute}.heading{--heading-color:var(--color-red);--heading-font-size:var(--app-title-font-size-1);--heading-letter-spacing:var(--app-title-letter-spacing);color:var(--heading-color);font-size:var(--heading-font-size);letter-spacing:var(--heading-letter-spacing);text-transform:uppercase}[icon]{position:relative}[icon=linkedin],[icon=github]{transform:translate(0,2px)}[wrapper]{--wrapper-padding-right-left:var(--app-padding-right-left);--wrapper-max-width:var(--app-wrapper);margin-right:auto;margin-left:auto;padding-right:var(--wrapper-padding-right-left);padding-left:var(--wrapper-padding-right-left);max-width:var(--wrapper-max-width)}.footer{--footer-background:var(--color-blue-dark);--footer-color:var(--color-white);--footer-font-size:var(--size-12);background:var(--footer-background);color:var(--footer-color);font-size:var(--footer-font-size);padding:var(--size-12)0;.footer__copyright { flex: 1 0 auto; } .footer__nav { align-items: center; display: flex; gap: var(--size-4); } .footer__link { padding: 0 var(--size-8); }}.section{--section-background:inherit;--section-color:inherit;--section-padding-top-bottom:16vh;--section-paddding-right-left:0;--section-content-gap:var(--size-8);background:var(--section-background);color:var(--section-color);padding:var(--section-padding-top-bottom)var(--section-paddding-right-left);position:relative;.section__content { display: flex; flex-direction: column; gap: var(--section-content-gap); }}[section-theme~=dark]{--section-background:var(--color-blue-dark);--section-color:var(--color-white)}[section-theme~=red]{--section-background:var(--color-red);--section-color:var(--color-white);.heading { --heading-color: var(--color-white); }}</style>
 
   </head>
 
@@ -28,21 +34,28 @@
   <div class="section__header" wrapper="structure">
 
     
+    
       <div class="section__content">
+        
         
           <h2 class="heading">Experience</h2>
         
         
+        
           <p class="copy">Twelve years of graphic/web design and development experience and four years of system administrative experience. Highly skilled in the use of HTML5, CSS3, PHP and the use of jQuery to develop modern, mobile and fully responsive websites.</p>
         
+        
+        
+        
       </div>
+      
     
-
-    
-
-
 
   </div>
+    
+  
+
+
 
 </section>
 <section  class="section" section-theme="dark" watch>
@@ -50,21 +63,28 @@
   <div class="section__header" wrapper="structure">
 
     
+    
       <div class="section__content">
+        
         
           <h2 class="heading">Specialization</h2>
         
         
+        
           <p class="copy">Front end user interface development (UI / UX) in which I work hand in hand with web designers to create what they have envisioned for the client while maintaining clean, efficient and modern coding techniques.</p>
         
+        
+        
+        
       </div>
+      
     
-
-    
-
-
 
   </div>
+    
+  
+
+
 
 </section>
 <section  class="section" section-theme="light" watch>
@@ -72,21 +92,28 @@
   <div class="section__header" wrapper="structure">
 
     
+    
       <div class="section__content">
+        
         
           <h2 class="heading">Development</h2>
         
         
+        
           <p class="copy">Utilizing HTML5, CSS3 and Javascript creating modern appealing websites is easier and faster than ever. Serving up streamlined HTML, CSS and Javascript on top of modern development practices produces a modern website in no time at all.</p>
         
+        
+        
+        
       </div>
+      
     
-
-    
-
-
 
   </div>
+    
+  
+
+
 
 </section>
 <section  class="section" section-theme="red" watch>
@@ -94,21 +121,32 @@
   <div class="section__header" wrapper="structure">
 
     
+    
       <div class="section__content">
+        
         
           <h2 class="heading">Resume</h2>
         
         
+        
           <p class="copy">View my code, don’t worry I’m not affraid! Right Click &gt; View Page Source. All of that, yeah that was me doing what I do best. Or, if you&#39;d like you can view my actual resume below.</p>
         
+        
+        
+          <div class="section__ctas">
+            <a href="https://docs.google.com/document/d/16jEGn8U72EJPARvov3lZHJcg6k6P9slDenUfcXhE-QU" button="resume">View Resume</a>
+          </div>
+        
+        
       </div>
+      
     
-
-    
-
-
 
   </div>
+    
+  
+
+
 
 </section>
 
@@ -116,8 +154,38 @@
     </main>
     
     
-    <footer>Footer</footer>
+    <footer id="footer" class="footer" role="contentinfo">
+
+  <div class="footer__content" wrapper="structure">
+    
+    <nav class="footer__nav" aria-label="social nav" role="navigation">
+      
+      <div class="footer__copyright">
+        &copy; 2024 Jacob Broadaway        
+      </div>
+      
+      
+      <a href="https://github.com/QNecron" class="footer__link" target="_blank" rel="noopener noreferrer">
+        <svg icon="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16" width="16" aria-hidden="true">
+          <path fill="#fff" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        <span class="srt">My LinkedIn profile</span>
+      </a>
+      
+      
+      <a href="https://www.linkedin.com/in/jacob-broadaway" class="footer__link" target="_blank" rel="noopener noreferrer">
+        <svg icon="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" width="16" height="16" aria-hidden="true">
+          <path fill="#fff" d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"></path>
+        </svg>
+        <span class="srt">My GitHub profile</span>        
+      </a>
+      
+    </nav>
+      
+  </div>
+  
+</footer>
     
   </body>
 
-  </html>
+</html>
