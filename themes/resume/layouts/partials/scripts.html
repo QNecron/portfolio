@@ -1,0 +1,4 @@
+{{ range .Params.customjs }}
+  {{ $js := resources.Get . | minify }}
+  <script>{{ $js.Content | safeJS }}</script>
+{{ end }}

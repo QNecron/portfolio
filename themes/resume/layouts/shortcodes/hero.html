@@ -1,0 +1,43 @@
+<section class="hero" hero-theme="{{ .Get "theme" | default "none" }}" watch>
+
+  {{ if and ( .Get "imgDesktop" ) ( .Get "imgMobile" ) }}
+    <picture class="hero-asset">
+      <source srcset="{{ .Get "imgDesktop" }}"
+        media="(min-width: 768px)"
+        height="{{ .Get "imgDesktopHeight" | default "1080px" }}"
+        width="{{ .Get "imgDesktopWidth" | default "1920px" }}">
+      <img src="{{ .Get "imgMobile" }}" class="hero-asset-img"
+        height="{{ .Get "imgMobileHeight" | default "853px" }}"
+        width="{{ .Get "imgMobileWidth" | default "480px" }}"
+        alt="">
+    </picture>
+  {{ end }}
+
+  <div class="hero-grid wrapper" hero-x="{{ .Get "xAxis" | default "2" }}" hero-y="{{ .Get "yAxis" | default "2" }}" wrapper="structure">
+
+    <div class="hero-content">
+
+      {{ if .Get "headingType1" }}<h1 class="hero-heading">{{ end }}
+      {{ if .Get "headingType2" }}<h2 class="hero-heading">{{ end }}
+
+      {{ if or ( .Get "heading1") ( .Get "heading2" ) }}
+        {{ if .Get "heading1" }}
+          <span class="hero-heading-1">{{ .Get "heading1" }}</span>
+        {{ end }}
+        {{ if .Get "heading2" }}
+          <span class="hero-heading-2">{{ .Get "heading2" }}</span>
+        {{ end }}
+      {{ end }}
+
+      {{ if .Get "headingType1" }}</h1>{{ end }}
+      {{ if .Get "headingType2" }}</h2>{{ end }}
+
+      {{ if .Get "copy" }}
+        <p class="hero-copy">{{ .Get "copy" }}</p>
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>

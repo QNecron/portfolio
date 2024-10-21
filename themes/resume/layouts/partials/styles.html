@@ -1,0 +1,3 @@
+{{ $sass := resources.Get "sass/portfolio.scss" }}
+{{ $style := $sass | resources.ToCSS | resources.Fingerprint | resources.Minify}}
+<style>{{ $style.Content | safeCSS }}</style>

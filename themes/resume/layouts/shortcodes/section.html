@@ -1,0 +1,20 @@
+<section {{ if .Get "id" }}id=""{{ end }} class="section" section-theme="{{ .Get "theme" | default "none" }}" watch>
+
+  <div class="wrapper" wrapper="{{ .Get "wrapper" | default "structure" }}">
+
+    {{ if or ( .Get "heading" ) ( .Get "copy" ) }}
+      <div class="section-content">
+        {{ if .Get "heading" }}
+          <h2 class="section-heading">{{ .Get "heading" }}</h2>
+        {{ end }}
+        {{ if .Get "copy" }}
+          <p class="section-copy">{{ .Get "copy" }}</p>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ .Inner }}
+
+  </div>
+
+</section>
