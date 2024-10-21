@@ -1,0 +1,104 @@
+/* resume */
+:root {
+  
+  --size-4: .25rem;
+  --size-8: .5rem;
+  --size-12: .75rem;
+  --size-16: 1rem;
+  
+  /* color: primary */
+  --color-blue-dark: #1a252f;
+  --color-cyan: #28e1bd;
+  --color-red: #e43725;
+  --color-white: #fff;
+  
+  /* color: secondary */
+  --color-blue-light: #3498db;
+  --color-pink: #f5a3de;
+  
+  --body-background-color: var(--color-white);
+  --body-font-color: var(--color-blue-dark);
+  --body-font-family: "Roboto", sans-serif;
+  
+  --app-title-font-size-1: 1.5rem; /* 24px */
+  --app-title-letter-spacing: .25rem; /* 4px */
+  
+  --app-padding-right-left: 8vw;
+  
+  --app-wrapper: 64rem; /* 1024px */
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none; /* safari */
+  appearance: none;
+}
+
+body {
+  background: var(--body-background-color);
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* typography */
+.heading {
+  --heading-color: var(--color-red);
+  --heading-font-size: var(--app-title-font-size-1);
+  --heading-letter-spacing: var(--app-title-letter-spacing);
+  --heading-margin-bottom: var(--size-8);
+  color: var(--heading-color);
+  font-size: var(--heading-font-size);
+  letter-spacing: var(--heading-letter-spacing);
+  margin-bottom: var(--heading-margin-bottom);
+  text-transform: uppercase;
+}
+
+/* wrapper */
+[wrapper] {
+  --wrapper-padding-right-left: var(--app-padding-right-left);
+  --wrapper-max-width: var(--app-wrapper);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--wrapper-padding-right-left);
+  padding-left: var(--wrapper-padding-right-left);
+  max-width: var(--wrapper-max-width);
+}
+
+/* section */
+.section {
+  --section-background: inherit;
+  --section-color: inherit;
+  --section-padding-top-bottom: 16vh;
+  --section-paddding-right-left: 0;
+  background: var(--section-background);
+  color: var(--section-color);
+  padding: var(--section-padding-top-bottom) var(--section-paddding-right-left);
+  position: relative;
+}
+
+[section-theme~="dark"] {
+  --section-background: var(--color-blue-dark);
+  --section-color: var(--color-white);
+}
+
+[section-theme~="red"] {
+  --section-background: var(--color-red);
+  --section-color: var(--color-white);
+  
+  .heading {
+    --heading-color: var(--color-white);  
+  }
+  
+}

@@ -2,18 +2,25 @@
 
   {{ if and ( .Get "imgDesktop" ) ( .Get "imgMobile" ) }}
     <picture class="hero-asset">
-      <source srcset="{{ .Get "imgDesktop" }}"
+      <source 
+        srcset="{{ .Get "imgDesktop" }}"
         media="(min-width: 768px)"
         height="{{ .Get "imgDesktopHeight" | default "1080px" }}"
         width="{{ .Get "imgDesktopWidth" | default "1920px" }}">
-      <img src="{{ .Get "imgMobile" }}" class="hero-asset-img"
+      <img 
+        src="{{ .Get "imgMobile" }}" class="hero-asset-img"
         height="{{ .Get "imgMobileHeight" | default "853px" }}"
         width="{{ .Get "imgMobileWidth" | default "480px" }}"
-        alt="">
+        alt="" />
     </picture>
   {{ end }}
 
-  <div class="hero-grid wrapper" hero-x="{{ .Get "xAxis" | default "2" }}" hero-y="{{ .Get "yAxis" | default "2" }}" wrapper="structure">
+  <div 
+    class="hero-grid wrapper" 
+    hero-x="{{ .Get "xAxis" | default "2" }}" 
+    hero-y="{{ .Get "yAxis" | default "2" }}" 
+    wrapper="structure"
+  >
 
     <div class="hero-content">
 

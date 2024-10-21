@@ -1,3 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://cp-development.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Jacob Broadaway | UX Engineer'
+theme = "resume"
+[markup.goldmark.renderer]
+  unsafe = true

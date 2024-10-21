@@ -1,14 +1,14 @@
 <section {{ if .Get "id" }}id=""{{ end }} class="section" section-theme="{{ .Get "theme" | default "none" }}" watch>
 
-  <div class="wrapper" wrapper="{{ .Get "wrapper" | default "structure" }}">
+  <div class="section__header" wrapper="{{ .Get "wrapper" | default "structure" }}">
 
     {{ if or ( .Get "heading" ) ( .Get "copy" ) }}
-      <div class="section-content">
+      <div class="section__content">
         {{ if .Get "heading" }}
-          <h2 class="section-heading">{{ .Get "heading" }}</h2>
+          <h2 class="heading">{{ .Get "heading" }}</h2>
         {{ end }}
         {{ if .Get "copy" }}
-          <p class="section-copy">{{ .Get "copy" }}</p>
+          <p class="copy">{{ .Get "copy" }}</p>
         {{ end }}
       </div>
     {{ end }}
