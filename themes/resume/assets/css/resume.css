@@ -1,16 +1,18 @@
 /* resume */
 :root {
   
+  --size-1: .063rem;
   --size-2: .125rem;
   --size-4: .25rem;
   --size-8: .5rem;
   --size-12: .75rem;
   --size-16: 1rem;
+  --size-24: 1.5rem;
   
   /* color: primary */
   --color-blue-dark: #1a252f;
   --color-cyan: #28e1bd;
-  --color-red: #e43725;
+  --color-red: #de2f1b;
   --color-white: #fff;
   
   /* color: secondary */
@@ -21,12 +23,14 @@
   --body-font-color: var(--color-blue-dark);
   --body-font-family: "Roboto", sans-serif;
   
-  --app-title-font-size-1: 1.5rem; /* 24px */
-  --app-title-letter-spacing: .25rem; /* 4px */
+  --app-title-font-size-1: var(--size-24);
+  --app-title-letter-spacing: var(--size-4);
   
   --app-padding-right-left: 8vw;
   
   --app-transition-1: .24s ease-in-out 0s;
+  
+  --app-text-shadow-1: var(--size-1) var(--size-2) rgba(26,37,47,.32);
   
   --app-wrapper: 64rem; /* 1024px */
   
@@ -73,6 +77,7 @@ body {
   --button-letter-spacing: var(--app-title-letter-spacing);
   --button-padding-top-bottom: calc(var(--size-12) + 1px); /* padding + border silliness */
   --button-padding-right-left: var(--size-16);
+  --button-text-shadow: none;
   --button-text-transform: uppercase;
   background: var(--button-background);
   border: var(--button-border);
@@ -83,10 +88,11 @@ body {
   letter-spacing: var(--button-letter-spacing);
   padding: var(--button-padding-top-bottom) var(--button-padding-right-left);
   text-decoration: none;
+  text-shadow: var(--button-text-shadow);
   text-transform: var(--button-text-transform);
 }
 
-/* CSS silliness for transitioning linear-gradient -_- */
+/* CSS silliness for transitioning linear-gradient */
 @property --button-bg-color1 {
   syntax: '<color>';
   inherits: false;
@@ -103,6 +109,7 @@ body {
   --button-background: linear-gradient(to right, var(--button-bg-color1), var(--button-bg-color2));
   --button-border: solid var(--size-2) var(--color-white);
   --button-color: var(--color-white);
+  --button-text-shadow: var(--app-text-shadow-1);
   transition: --button-bg-color1 .24s, --button-bg-color2 .24s;
   
   &:focus,
