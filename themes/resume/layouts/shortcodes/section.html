@@ -1,4 +1,4 @@
-<section {{ if .Get "id" }}id=""{{ end }} class="section" section-theme="{{ .Get "theme" | default "none" }}" watch>
+<section {{ if .Get "id" }}id="{{ .Get "id" }}"{{ end }} class="section" section-theme="{{ .Get "theme" | default "none" }}">
 
   <div class="section__header" wrapper="{{ .Get "wrapper" | default "structure" }}">
 
@@ -24,8 +24,8 @@
       
     {{ end }}
 
-  </div>
+    {{ .Inner }}
     
-  {{ .Inner }}
+  </div>
 
 </section>

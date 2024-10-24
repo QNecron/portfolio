@@ -1,4 +1,60 @@
-<section class="hero" hero-theme="{{ .Get "theme" | default "none" }}" watch>
+<section class="hero" hero-theme="{{ .Get "theme" | default "resume" }}">
+  
+  {{ if and ( .Get "imgDesktop" ) ( .Get "imgMobile" ) }}
+  
+    <picture class="hero__asset">
+      
+      <source 
+        srcset="{{ .Get "imgDesktop" }}"
+        media="(min-width: 768px)"
+        height="{{ .Get "imgDesktopHeight" | default "1080px" }}"
+        width="{{ .Get "imgDesktopWidth" | default "1920px" }}"
+      >
+      
+      <img 
+        src="{{ .Get "imgMobile" }}" 
+        class="hero__img"
+        height="{{ .Get "imgMobileHeight" | default "853px" }}"
+        width="{{ .Get "imgMobileWidth" | default "480px" }}"
+        alt="" 
+        aria-hidden="true"
+      />
+      
+    </picture>
+    
+  {{ end }}
+  
+  <div 
+    class="hero__grid" 
+    hero-layout="{{ .Get "layout" | default "center" }}" 
+    wrapper="{{ .Get "wrapper" | default "structure" }}"
+  >
+  
+    <div class="hero__content">
+      
+      {{if .Get "heading" }}
+      
+        <h1 class="heading">
+          {{ .Get "heading" }}
+        </h1>
+      
+      {{ end }}
+      
+      {{ if .Get "subheading" }}
+      
+        <h2 class="subheading">
+          {{ .Get "subheading" }}
+        </h2>
+        
+      {{ end }}
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+{{/*  <section class="hero" hero-theme="{{ .Get "theme" | default "none" }}" watch>
 
   {{ if and ( .Get "imgDesktop" ) ( .Get "imgMobile" ) }}
     <picture class="hero-asset">
@@ -47,4 +103,4 @@
 
   </div>
 
-</section>
+</section>  */}}
