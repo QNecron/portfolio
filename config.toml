@@ -1,0 +1,6 @@
+baseURL = 'https://jacobbroadaway.com/'
+languageCode = 'en-us'
+title = 'Jacob Broadaway | UI / UX / Engineer'
+theme = "resume"
+[markup.goldmark.renderer]
+  unsafe = true

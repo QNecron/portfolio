@@ -1,6 +1,0 @@
-baseURL = 'https://cp-development.org/'
-languageCode = 'en-us'
-title = 'Jacob Broadaway | UX Engineer'
-theme = "resume"
-[markup.goldmark.renderer]
-  unsafe = true
