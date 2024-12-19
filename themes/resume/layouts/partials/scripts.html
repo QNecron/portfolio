@@ -1,4 +1,2 @@
-{{ range .Params.customjs }}
-  {{ $js := resources.Get . | minify }}
-  <script>{{ $js.Content | safeJS }}</script>
-{{ end }}
+{{ $js := resources.Get "js/resume.js" | minify }}
+<script>{{ $js.Content | safeJS }}</script>

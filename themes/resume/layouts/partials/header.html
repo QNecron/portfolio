@@ -3,19 +3,26 @@
   <div class="header__content">
   
     <nav class="header__nav" aria-label="primary nav" role="navigation">
+
+      <a href="/" class="header__link header__nav-logo primary">
+        <span class="srt">Home</span>
+        <span class="logo" aria-hidden="true">
+          &lsaquo;&rsaquo;
+        </span>
+      </a>
       
-      <ul class="nav">
+      <button 
+        id="navControl"
+        class="header__link header__nav-mobile" 
+        aria-expanded="false" 
+        aria-controls="navList"
+      >
+        Menu
+      </button>
       
-        <li class="nav__item logo">
-          <!-- code -->
-          <a href="/" class="header__link primary">
-            <span class="srt">Home</span>
-            Icon
-          </a>
-        </li>
+      <ul id="navList" class="nav">
       
         <li class="nav__item">
-          <!-- internal links -->
           <a href="#introduction" class="header__link">
             Introduction
           </a>
