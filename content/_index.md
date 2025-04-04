@@ -3,15 +3,18 @@ title: Home
 ---
 
 {{< hero 
+  id="introduction"
+  theme="dark animate no-image"
+  layout="bottom-left"
   heading="Jacob Broadaway" 
-  subheading="UI / UX / Web Developer"
+  subheading="Front End Engineer"
 >}}
 
 {{< section 
   id="experience"
   theme="light" 
   heading="Experience"
-  copy="Twelve years of graphic/web design and development experience and four years of system administrative experience. Highly skilled in the use of HTML5, CSS3, PHP and the use of jQuery to develop modern, mobile and fully responsive websites."
+  copy="20+ years of development experience focusing on creating engaging user experiences on the web. Highly skilled in the use of HTML, CSS, and JavaScript to develop modern, accessible, and performant websites. 5+ years with React and Node experience, which includes several frames like GatsbyJS, Nuxt, and Remix."
 >}}
 
 {{< /section >}}
@@ -20,7 +23,7 @@ title: Home
   id="specialization"
   theme="dark" 
   heading="Specialization"
-  copy="Front end user interface development (UI / UX) in which I work hand in hand with web designers to create what they have envisioned for the client while maintaining clean, efficient and modern coding techniques."
+  copy="Front end user interface development (UI / UX) in which I work hand in hand with designers to create what they have envisioned while maintaining clean, efficient and modern coding techniques. I've worked on several Design systems following Atomic Design, by Brad Frost, width the use of UX tools like Figma and Xd."
 >}}
 
 {{< /section >}}
@@ -29,7 +32,7 @@ title: Home
   id="development"
   theme="light" 
   heading="Development"
-  copy="Utilizing HTML5, CSS3 and Javascript creating modern appealing websites is easier and faster than ever. Serving up streamlined HTML, CSS and Javascript on top of modern development practices produces a modern website in no time at all."
+  copy="Not matter the stack, the fundamentals of develop should still apply. Be it a React, Angular, or Vue framework I work to ensure proper accessibility in accordance with WCAG 2.x guidelines, proper performance metrics for SEO and user experience, and clean scalable code to be reused as needed."
 >}}
 
 {{< /section >}}
@@ -38,7 +41,8 @@ title: Home
   id="resume"
   theme="red" 
   heading="Resume"
-  copy="View my code, don’t worry I’m not affraid! Right Click > View Page Source. All of that, yeah that was me doing what I do best. Or, if you'd like you can view my actual resume below." 
+  copy="You can view and/or download my resume below (Google Doc) or visit my GitHub or LinkedIn profile. There you'll find I have experience in a wide variety of frameworks and SaaS solutions while working with small businesses up to large enterprises."
+  button="resume"
   cta="View Resume"
   url="https://docs.google.com/document/d/16jEGn8U72EJPARvov3lZHJcg6k6P9slDenUfcXhE-QU"
 >}}

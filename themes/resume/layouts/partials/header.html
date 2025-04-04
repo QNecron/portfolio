@@ -1,62 +1,79 @@
 <header id="header" class="header" role="banner">
   
-  <div class="header__content">
-  
-    <nav class="header__nav" aria-label="primary nav" role="navigation">
+  <nav class="header__nav" aria-label="Primary menu" role="navigation">
 
-      <a href="/" class="header__link header__nav-logo primary">
-        <span class="srt">Home</span>
-        <span class="logo" aria-hidden="true">
-          &lsaquo;&rsaquo;
-        </span>
-      </a>
+    <a href="/" class="header__nav-link" button="icon primary">
+      {{- partial "icons.svg" (
+        dict "icon" "code" "size" "24px" "class" "logo" "label" "Home page") 
+      -}}
+    </a>
+    
+    <button class="header__nav-link" button="icon primary" dialog-show="menu">
+      {{- partial "icons.svg" (
+        dict "icon" "menu" "size" "24px" "class" "menu" "label" "Open primary menu") 
+      -}}
+    </button>
+    
+  </nav>  
+  
+</header>
+
+<dialog class="dialog" dialog="menu">
+
+  <div class="dialog__content">
+  
+    <button class="dialog__close" button="icon secondary" dialog-hide="menu">
+      {{- partial "icons.svg" (
+        dict "icon" "close" "size" "24px" "class" "logo" "label" "Close primary menu") 
+      -}}
+    </button>
+    
+    <ul class="nav">
+    
+      <li class="nav__item">
+        <a href="#introduction" class="nav__link">
+          Introduction
+        </a>
+      </li>
+    
+      <li class="nav__item">
+        <a href="#experience" class="nav__link">
+          Experience
+        </a>
+      </li>
+    
+      <li class="nav__item">
+        <a href="#specialization" class="nav__link">
+          Specialization
+        </a>
+      </li>
+    
+      <li class="nav__item">
+        <a href="#development" class="nav__link">
+          Development
+        </a>
+      </li>
       
-      <button 
-        id="navControl"
-        class="header__link header__nav-mobile" 
-        aria-expanded="false" 
-        aria-controls="navList"
-      >
-        Menu
-      </button>
+      <li class="nav__item">
+        <a href="#resume" class="nav__link">
+          Resume
+        </a>
+      </li>
+
+      <li class="nav__item">
+        <a href="https://github.com/QNecron/" target="_blank" rel="noopener noreferrer" class="nav__link">
+          GitHub
+        </a>
+      </li>
       
-      <ul id="navList" class="nav">
+      <li class="nav__item">
+        <a href="https://www.linkedin.com/in/jacob-broadaway/" target="_blank" rel="noopener noreferrer" class="nav__link">
+          LinkedIn
+        </a>
+      </li>
       
-        <li class="nav__item">
-          <a href="#introduction" class="header__link">
-            Introduction
-          </a>
-        </li>
-      
-        <li class="nav__item">
-          <a href="#experience" class="header__link">
-            Experience
-          </a>          
-        </li>
-      
-        <li class="nav__item">
-          <a href="#specialization" class="header__link">
-            Specialization
-          </a>
-        </li>
-      
-        <li class="nav__item">
-          <a href="#development" class="header__link">
-            Development
-          </a>
-        </li>
-      
-        <li class="nav__item">
-          <a href="#resume" class="header__link secondary">
-            Resume
-          </a>
-        </ul> 
-        
-      </ul>   
-      
-    </nav>
+    </ul>
   
   </div>
   
-  
-</header>
+</dialog> 

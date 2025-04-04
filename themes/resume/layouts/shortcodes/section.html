@@ -7,16 +7,16 @@
       <div class="section__content">
         
         {{ if .Get "heading" }}
-          <h2 class="heading">{{ .Get "heading" }}</h2>
+          <h2 class="section__title" heading="3">{{ .Get "heading" }}</h2>
         {{ end }}
         
         {{ if .Get "copy" }}
-          <p class="copy">{{ .Get "copy" }}</p>
+          <p class="section__copy">{{ .Get "copy" }}</p>
         {{ end }}
         
         {{ if .Get "cta" }}
           <div class="section__ctas">
-            <a href="{{ .Get "url" }}" button="resume">{{ .Get "cta" }}</a>
+            <a href="{{ .Get "url" }}" button="{{ .Get "button" | default "primary" }}">{{ .Get "cta" }}</a>
           </div>
         {{ end }}
         

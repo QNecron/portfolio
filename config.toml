@@ -1,6 +1,6 @@
 baseURL = 'https://jacobbroadaway.com/'
 languageCode = 'en-us'
-title = 'Jacob Broadaway | UI / UX / Engineer'
+title = 'Jacob Broadaway | Front End Engineer'
 theme = "resume"
 [markup.goldmark.renderer]
   unsafe = true

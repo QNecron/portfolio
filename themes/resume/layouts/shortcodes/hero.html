@@ -1,4 +1,4 @@
-<section class="hero" hero-theme="{{ .Get "theme" | default "resume" }}">
+<section {{ if .Get "id" }}id="{{ .Get "id" }}"{{ end }} class="hero" hero-theme="{{ .Get "theme" }}">
   
   {{ if and ( .Get "imgDesktop" ) ( .Get "imgMobile" ) }}
   
@@ -26,7 +26,7 @@
   
   <div 
     class="hero__grid" 
-    hero-layout="{{ .Get "layout" | default "center" }}" 
+    hero-layout="{{ .Get "layout" | default "bottom-center" }}" 
     wrapper="{{ .Get "wrapper" | default "structure" }}"
   >
   
@@ -34,17 +34,13 @@
       
       {{if .Get "heading" }}
       
-        <h1 class="heading">
-          {{ .Get "heading" }}
-        </h1>
+        <h1 class="hero__title-1" heading="1">{{ .Get "heading" }}</h1>
       
       {{ end }}
       
       {{ if .Get "subheading" }}
       
-        <h2 class="subheading">
-          {{ .Get "subheading" }}
-        </h2>
+        <h2 class="hero__title-2" heading="4">{{ .Get "subheading" }}</h2>
         
       {{ end }}
       
