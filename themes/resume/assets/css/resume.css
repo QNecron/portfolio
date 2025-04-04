@@ -402,12 +402,14 @@ body:has(.dialog[open]) {
   
   --nav-link-background: transparent;
   --nav-link-font-color: var(--color-white);
-  --nav-link-padding: calc(var(--size-small) + var(--size-4)) var(--size-large);
+  --nav-link-padding: 0 var(--size-large);
+  --nav-link-line-height: var(--size-xlarge);
   
   display: flex;
   flex-direction: column;
   gap: var(--nav-gap);
   padding: var(--nav-padding);
+  line-height: var(--nav-link-line-height);
 }
 
 .nav__link {
