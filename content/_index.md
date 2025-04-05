@@ -1,5 +1,6 @@
 ---
-title: Home
+title: "Portfolio"
+description: "Jacob Broadaway: Front End Engineer/Architect with 20+ years of experience, and 12+ years of experience in e-commerce, ranging from small businesses to enterprise solutions."
 ---
 
 {{< hero 
