@@ -14,9 +14,21 @@
           <p class="section__copy">{{ .Get "copy" }}</p>
         {{ end }}
         
-        {{ if .Get "cta" }}
+        {{ if or ( .Get "cta1" ) ( .Get "cta2" ) ( .Get "cta3" ) }}
           <div class="section__ctas">
-            <a href="{{ .Get "url" }}" button="{{ .Get "button" | default "primary" }}">{{ .Get "cta" }}</a>
+
+            {{ if .Get "cta1" }}
+              <a href="{{ .Get "url1" }}" target="_blank" rel="noopener noreferrer" button="{{ .Get "button1" | default "primary" }}">{{ .Get "cta1" }}</a>
+            {{ end }}
+
+            {{ if .Get "cta2" }}
+              <a href="{{ .Get "url2" }}" target="_blank" rel="noopener noreferrer" button="{{ .Get "button2" | default "primary" }}">{{ .Get "cta2" }}</a>
+            {{ end }}
+            
+            {{ if .Get "cta3" }}
+              <a href="{{ .Get "url3" }}" target="_blank" rel="noopener noreferrer" button="{{ .Get "button3" | default "primary" }}">{{ .Get "cta3" }}</a>
+            {{ end }}
+
           </div>
         {{ end }}
         

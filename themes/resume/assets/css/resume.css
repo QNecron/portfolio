@@ -147,6 +147,7 @@ picture {
   --button-font-size: var(--size-12);
   --button-padding: var(--size-medium) var(--size-large);
   
+  align-items: center;
   background: var(--button-background);
   border: solid var(--size-2) var(--button-border-color);
   border-radius: var(--button-border-radius);
@@ -155,6 +156,7 @@ picture {
   font-family: var(--button-font-family);
   font-size: var(--button-font-size);
   font-weight: 700;
+  justify-content: center;
   padding: var(--button-padding);
   text-decoration: none;
   text-transform: uppercase;
@@ -175,6 +177,19 @@ picture {
     --button-font-color: var(--color-white);
   }
   
+}
+
+[button~="inverse"] {
+  --button-background: var(--color-white);
+  --button-border-color: var(--color-white);
+  --button-font-color: var(--color-primary);
+
+  &:focus,
+  &:hover {
+    --button-background: var(--color-primary);
+    --button-border-color: var(--color-primary);
+    --button-font-color: var(--color-white);    
+  }
 }
 
 [button~="secondary"] {
@@ -286,7 +301,6 @@ picture {
   padding: var(--dialog-padding);
   height: auto;
   width: var(--dialog-width);
-  max-width: calc(100% - var(--dialog-top));
   opacity: var(--dialog-opacity);
   position: fixed;
   top: var(--dialog-top);
@@ -328,6 +342,17 @@ picture {
   --dialog-bottom: var(--size-xmedium);
   --dialog-left: auto;
   --dialog-transform: translate(104%, 0);
+  
+  /* media */
+  @media screen and (min-width: 768px) {
+    --dialog-left: auto;
+  }
+  @media screen and (max-width: 768px) {
+    --dialog-left: var(--size-xmedium);
+    
+    max-width: calc(100% - var(--size-48));
+  }
+  
 }
 
 @starting-style {
@@ -529,19 +554,13 @@ body:has(.dialog[open]) {
   padding-bottom: 32vh;
 }
 
-[hero-theme~="animate"] {
+/* [hero-theme~="animate"] {
   
   .hero__title-1,
   .hero__title-2 {
     width: 100%;
     opacity: 0;
     position: relative;
-    
-    /* media */
-    /* @media screen and (max-width: 767px) {
-      text-align: center;
-    } */
-
   }
   
   .hero__title-1 {
@@ -553,7 +572,7 @@ body:has(.dialog[open]) {
     margin-left: var(--size-8);
   }
   
-}
+} */
 
 @keyframes slideDown {
   0% {
@@ -593,6 +612,9 @@ body:has(.dialog[open]) {
   
   --section-title-font-color: var(--color-secondary);
   
+  --section-ctas-flex-direction: row;
+  --section-ctas-gap: var(--size-xmedium);
+  
   background: var(--section-background);
   color: var(--section-font-color);
   padding-top: var(--section-padding);
@@ -607,6 +629,18 @@ body:has(.dialog[open]) {
 
 .section__title {
   color: var(--section-title-font-color);
+}
+
+.section__ctas {
+  display: flex;
+  flex-direction: var(--section-ctas-flex-direction);
+  gap: var(--section-ctas-gap);
+  
+  /* media */
+  @media screen and (max-width: 767px) {
+    --section-ctas-flex-direction: column;
+  }
+  
 }
 
 [section-theme~="dark"] {
