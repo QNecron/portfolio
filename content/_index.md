@@ -15,7 +15,7 @@ description: "Jacob Broadaway: Front End Engineer/Architect with 20+ years of ex
   id="experience"
   theme="light" 
   heading="Experience"
-  copy="20+ years of development experience focusing on creating engaging user experiences on the web. Highly skilled in the use of HTML, CSS, and JavaScript to develop modern, accessible, and performant websites. 5+ years with React and Node experience, which includes several frameworks like GatsbyJS, Next, and Remix."
+  copy="20+ years of development experience focusing on creating engaging user experiences on the web. Highly skilled in the use of HTML, CSS, and JavaScript to develop modern, accessible, and performant websites. 7+ years with React and Node experience, which includes several frameworks like GatsbyJS, Next, and Remix."
 >}}
 
 {{< /section >}}
