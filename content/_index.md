@@ -42,7 +42,7 @@ description: "Jacob Broadaway: Front End Engineer/Architect with 20+ years of ex
   id="specialization"
   theme="no-top dark" 
   heading="Specialization"
-  copy="Front end user interface development in which I work hand in hand with designers to create what they have envisioned while maintaining clean, efficient and modern coding techniques. I've worked on several Design systems following Atomic Design, by Brad Frost, width the use of UX tools like Figma and Xd."
+  copy="Front end user interface development in which I work hand in hand with designers to create what they have envisioned while maintaining clean, efficient and modern coding techniques. I've worked on several Design systems following Atomic Design, by Brad Frost, with the use of UX tools like Figma and Xd."
 >}}
 
 {{< /section >}}
